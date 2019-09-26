@@ -41,6 +41,15 @@
   "files": [
     "dist/*"
   ],
+  "main": "dist/angular-gridster2/bundles/angular-gridster2.umd.js",
+  "module": "dist/angular-gridster2/fesm5/angular-gridster2.js",
+  "es2015": "dist/angular-gridster2/fesm2015/angular-gridster2.js",
+  "esm5": "dist/angular-gridster2/esm5/angular-gridster2.js",
+  "esm2015": "dist/angular-gridster2/esm2015/angular-gridster2.js",
+  "fesm5": "dist/angular-gridster2/fesm5/angular-gridster2.js",
+  "fesm2015": "dist/angular-gridster2/fesm2015/angular-gridster2.js",
+  "typings": "dist/angular-gridster2/angular-gridster2.d.ts",
+  "metadata": "dist/angular-gridster2/angular-gridster2.metadata.json",
   "dependencies": {},
   "devDependencies": {
     "@angular-devkit/build-angular": "0.803.2",
