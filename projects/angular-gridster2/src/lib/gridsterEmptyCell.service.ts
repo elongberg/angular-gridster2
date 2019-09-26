@@ -99,8 +99,6 @@ export class GridsterEmptyCell {
     if (this.gridster.movingItem || GridsterUtils.checkContentClassForEmptyCellClickEvent(this.gridster, e)) {
       return;
     }
-    e.preventDefault();
-    e.stopPropagation();
     const item = this.getValidItemFromEvent(e);
     if (!item) {
       return;
@@ -123,8 +121,6 @@ export class GridsterEmptyCell {
   }
 
   emptyCellDragOver(e: any): void {
-    e.preventDefault();
-    e.stopPropagation();
     const item = this.getValidItemFromEvent(e);
     if (item) {
       e.dataTransfer.dropEffect = 'move';
@@ -140,8 +136,6 @@ export class GridsterEmptyCell {
     if (GridsterUtils.checkContentClassForEmptyCellClickEvent(this.gridster, e)) {
       return;
     }
-    e.preventDefault();
-    e.stopPropagation();
     const item = this.getValidItemFromEvent(e);
     const leftMouseButtonCode = 1;
     if (!item || e.buttons !== leftMouseButtonCode) {
@@ -159,8 +153,6 @@ export class GridsterEmptyCell {
   }
 
   emptyCellMouseMove(e: any): void {
-    e.preventDefault();
-    e.stopPropagation();
     const item = this.getValidItemFromEvent(e, this.initialItem);
     if (!item) {
       return;
@@ -193,8 +185,6 @@ export class GridsterEmptyCell {
   }
 
   getValidItemFromEvent(e: any, oldItem?: GridsterItem | null): GridsterItem | undefined {
-    e.preventDefault();
-    e.stopPropagation();
     GridsterUtils.checkTouchEvent(e);
     const rect = this.gridster.el.getBoundingClientRect();
     const x = e.clientX + this.gridster.el.scrollLeft - rect.left - this.gridster.$options.margin;
